@@ -1,6 +1,6 @@
-# dg-skills
+# Discourse Graph skills
 
-Agent skills for working with discourse graphs, packaged as a Claude Code plugin marketplace. Edit the skills here, then install them anywhere from here.
+Agent skills for working with [discourse graphs](https://discoursegraphs.com), packaged as a Claude Code plugin marketplace. Each skill is a standard [Agent Skill](https://agentskills.io) folder, so other agents can use them too.
 
 ## What's in it
 
@@ -18,25 +18,34 @@ Both skills are tool-agnostic. `SKILL.md` describes each step, and the `referenc
 In Claude Code:
 
 ```
-/plugin marketplace add ~/Repos/dg-skills
-/plugin install discourse-graph@dg-skills
+/plugin marketplace add DiscourseGraphs/discourse-graph-skills
+/plugin install discourse-graph@discourse-graph-skills
 ```
 
-Once the repo is on GitHub, the first line becomes `/plugin marketplace add <owner>/dg-skills`. The skills then show up as `discourse-graph:evidence-candidates` and `discourse-graph:figure-extraction`.
+The skills then show up as `discourse-graph:evidence-candidates` and `discourse-graph:figure-extraction`. If you have no GitHub SSH key, set `CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1` before adding the marketplace.
 
-For other agents (Codex, Cursor, Gemini CLI and others), each folder under `plugins/discourse-graph/skills/` is a standard Agent Skill. Copy it into that agent's skills directory.
+To get updates, run `/plugin marketplace update discourse-graph-skills`, or turn on auto-update for this marketplace under **Marketplaces** in `/plugin`.
+
+The quote checker needs Python 3 with PyMuPDF (`pip install pymupdf`).
+
+For other agents (Codex, Cursor, Gemini CLI and others), copy a folder from `plugins/discourse-graph/skills/` into that agent's skills directory.
 
 ## Editing
 
 - **Edit here, never in an installed copy.**
 - **Bump `version` in `plugin.json` for each release.** People who installed the plugin get changes only when the version changes.
 - **Remove personal copies.** If you also have a personal skill with the same name in `~/.claude/skills/`, both can trigger. Remove the personal copy once you use the plugin.
-- **Test changes first.** Before a release, run the scenarios in `tests/` with a fresh agent and compare against the recorded results.
+- **Test changes first.** Run the scenarios in `tests/` with a fresh agent and compare against the recorded results. After changing `check_quote.py`, run `python3 tests/test_check_quote.py`.
 - **Validate:** `claude plugin validate .`
 
-## Credits and license
+## Credits
 
 - `evidence-candidates` is generalized from the Akamatsu lab's `evidence-candidates` skill.
-- The verbatim-quote rule, the evidence bundle, and the figure-capture methods and PubMed Central route in `figure-extraction` are adapted from [DiscourseGraphs/living-synthesis-metaresearch](https://github.com/DiscourseGraphs/living-synthesis-metaresearch) (Joel Chan's team, with commits by Karola Kirsanow, building on Jay Patel's living-synthesis vault). That repository is private and has no license, so check with Joel before sharing these skills outside the team.
+- The verbatim-quote rule, the evidence bundle, and the figure-capture methods and PubMed Central route in `figure-extraction` are adapted from the living-synthesis pipeline (Joel Chan's team, with work by Karola Kirsanow, building on Jay Patel's living-synthesis vault).
 
-This repository has no license yet.
+## License
+
+- The skills, references and documentation are licensed under [CC BY 4.0](LICENSE).
+- The code (`*.py` files and the code snippets in the references) is licensed under the [MIT License](LICENSE-CODE).
+
+Copyright (c) 2026 Discourse Graphs Project contributors.

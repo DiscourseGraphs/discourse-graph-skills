@@ -1,5 +1,5 @@
 {
-  "name": "dg-skills",
+  "name": "discourse-graph-skills",
   "description": "Agent skills for working with discourse graphs: staging evidence from papers and grounding it in figures.",
   "owner": {
     "name": "Discourse Graphs Project"
