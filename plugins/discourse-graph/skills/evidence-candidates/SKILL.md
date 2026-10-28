@@ -15,7 +15,7 @@ An evidence candidate is one observation from a paper, staged so a person can re
   - the relation names and the citekey style
   - where staging goes
 
-  In Roam they're in the graph guidelines. In an Obsidian vault they're in its `CLAUDE.md` or conventions notes. If the conventions leave something out, copy how existing staged candidates in the graph look.
+  In Roam they're in the graph guidelines. In an Obsidian vault they're in its `CLAUDE.md` or conventions notes. If the conventions leave something out, copy how existing staged candidates in the graph look. `references/graphs-and-zotero.md` has recipes for Roam, Obsidian, Zotero and running with no graph tool.
 - **Know the target.** This is the question, hypothesis or claim the evidence feeds. Link the existing node by its exact title, in the graph's typed form, e.g. `[[QUE]] - {question}`. If none exists, say that staging would create it.
 - **Check what already exists** from this paper: evidence nodes and staged candidates. Don't restage an observation that's already there. If a new candidate overlaps an existing node, note the overlap for the reviewer.
 - **Where to stage:** wherever the person says. If they haven't said, propose a place and confirm it before writing. Good choices are the graph's staging page if it has one, the person's own page, or today's entry.

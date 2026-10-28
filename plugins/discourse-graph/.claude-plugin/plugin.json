@@ -1,6 +1,6 @@
 {
   "name": "discourse-graph",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Stage Evidence candidates from papers and ground each one in the figure panel it reports. Works in Roam, Obsidian, or any discourse graph whose conventions the agent can read.",
   "author": {
     "name": "Discourse Graphs Project"
