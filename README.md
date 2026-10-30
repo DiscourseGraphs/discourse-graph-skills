@@ -1,6 +1,6 @@
 # Discourse Graph skills
 
-Agent skills for working with [discourse graphs](https://discoursegraphs.com), packaged as a Claude Code plugin marketplace. Each skill is a standard [Agent Skill](https://agentskills.io) folder, so other agents can use them too.
+Agent skills for working with [discourse graphs](https://discoursegraphs.com), packaged as a Claude Code plugin marketplace. Each skill is a standard [Agent Skill](https://agentskills.io) folder, so other agents can use them too. These are research prototypes, so anticipate that they will change frequently.
 
 ## What's in it
 
