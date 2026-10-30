@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; font-src data:; media-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>{{TITLE}}</title>
+  <!-- {{PROVENANCE}} -->
+  <style>{{CSS}}</style>
+  <script>{{JS}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="page-header">
+    <a class="page-title" href="#main">{{TITLE}}</a>
+    {{THEME_BUTTON}}
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="page-heading"><h1>{{TITLE}}</h1>{{SUBTITLE}}</div>
+    <section id="overview" class="overview" aria-label="Overview">{{OVERVIEW}}</section>
+    {{NAV}}
+    {{SEARCH}}
+    {{CONTROLS}}
+    <div id="content">{{CONTENT}}</div>
+    <p id="ui-status" class="status" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>

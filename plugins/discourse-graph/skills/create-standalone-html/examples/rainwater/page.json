@@ -1,0 +1,26 @@
+{
+  "title": "Where does the rain go?",
+  "subtitle": "A fictional rainwater system, explained one layer at a time.",
+  "overview": "overview.html",
+  "content": "content.html",
+  "extra_css": "example.css",
+  "nav": [
+    {
+      "label": "System details",
+      "target": "#system"
+    },
+    {
+      "label": "Compare options",
+      "target": "#compare"
+    },
+    {
+      "label": "Explore scenarios",
+      "target": "#scenarios"
+    },
+    {
+      "label": "Try the controls",
+      "target": "#guide"
+    }
+  ],
+  "search": true
+}
