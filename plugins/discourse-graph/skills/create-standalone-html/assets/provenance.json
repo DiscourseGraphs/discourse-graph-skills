@@ -1,0 +1,6 @@
+{
+  "starter_version": "1.0.0",
+  "primer_primitives": "11.10.0",
+  "upstream": "https://github.com/primer/primitives",
+  "notes": "Primer design tokens and MIT license retained; stylesheet comment updated for standalone HTML pages. Shared standalone HTML starter."
+}

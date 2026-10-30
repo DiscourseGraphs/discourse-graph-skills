@@ -9,9 +9,12 @@ One plugin, `discourse-graph` (version in `plugins/discourse-graph/.claude-plugi
 | Skill | Use it to |
 |---|---|
 | `evidence-candidates` | Stage findings from papers as Evidence candidates, each with a verbatim quote, a figure panel and its methods context |
+| `create-standalone-html` | Draft standalone HTML explanations with an optional offline starter; requires the separately installed `discourse-engineering-writing-style` skill |
 | `figure-extraction` | Find a paper's PDF (Zotero → project folder → ask) and crop the figure panel a statement reports, recording which file and method it came from |
 
-Both skills are tool-agnostic. `SKILL.md` describes each step, and the `references/` files list ways to do each step with Zotero, PyMuPDF, poppler, PubMed Central, Roam and Obsidian.
+The research skills are tool-agnostic. `SKILL.md` describes each step, and the `references/` files list ways to do each step with Zotero, PyMuPDF, poppler, PubMed Central, Roam and Obsidian.
+
+The proposed HTML skill includes a [fictional rainwater example](plugins/discourse-graph/skills/create-standalone-html/examples/rainwater/README.md). Download `example.html` and open it locally; GitHub displays its source. The HTML bundler needs Python 3 and no third-party Python packages. Its writing-style dependency is not bundled here.
 
 ## Install
 

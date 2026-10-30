@@ -31,3 +31,7 @@ Checklist:
 - **Baselines (no skill, default model).** Both runs wrote precise statements and clean crops. Neither included a verbatim quote or recorded where a crop came from. One cropped from the folder copy but cited the Zotero copy, and guessed a citekey (`takahashi2025genomewide`) that differs from Zotero's (`takahashiGenomewideCRISPRCas9Knockout2025`). Both spent many calls working out the graph's staging format. Tool calls: 59 (A) and 51 (B).
 - **With the skills, round 1 (default model).** Every candidate had a verbatim quote and a full Grounding line. B used the placeholder instead of guessing a key. Tool calls: 72 (A) and 24 (B). The feedback led to the fixes in round 2.
 - **With the skills, round 2 (A on the default model, B on Sonnet).** Both passed the checklist. Both found that `check_quote.py` ignored signs and `<`/`>`. That was fixed, and the regression test above was added. Not yet re-run after the final round of text edits.
+
+## Standalone HTML proposal
+
+Run `python3 tests/test_bundle_html.py` for the offline bundler contracts (7 tests), and `node --check plugins/discourse-graph/skills/create-standalone-html/assets/ui.js` for JavaScript syntax. The [rainwater example checklist](../plugins/discourse-graph/skills/create-standalone-html/examples/rainwater/README.md) covers manual browser behavior. Browser checks are pending because local-file rendering was blocked during preparation.

@@ -1,0 +1,13 @@
+.eyebrow { font-size: .75rem; letter-spacing: .12em; font-weight: 700; color: var(--fgColor-accent); }
+.eyebrow .badge { margin-left: 12px; letter-spacing: 0; }
+.overview { border-radius: 16px; padding: 28px; }
+.metrics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin: 24px 0; }
+.metrics > div { border: 1px solid var(--borderColor-default); background: var(--bgColor-muted); border-radius: 10px; padding: 18px; }
+.metrics strong { display: block; font-size: 2rem; letter-spacing: -.04em; color: var(--fgColor-accent); }
+.metrics span, .flow span { display: block; font-size: .85rem; color: var(--fgColor-muted); }
+.flow { list-style: none; }
+.flow > li { border-top: 3px solid var(--borderColor-accent-emphasis); }
+.flow strong { display: block; margin: 8px 0; }
+.flow .step { font-size: .7rem; letter-spacing: .08em; }
+caption { text-align: left; font-weight: 600; padding: 12px 0; }
+@media (max-width:600px) { .metrics { grid-template-columns: 1fr; } .metrics > div { padding: 12px 16px; } }
