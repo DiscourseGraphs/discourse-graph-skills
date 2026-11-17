@@ -31,7 +31,7 @@ import unicodedata
 
 import fitz
 
-KEEP = set(string.ascii_lowercase + string.digits + "<>=±×%≤≥~")
+KEEP = set(string.ascii_lowercase + string.digits + "<>=±×%≤≥~≈+.")
 MIN_RUN = 8      # shortest piece of quote matched on its own
 SHORT_SKIP = 12  # skipped PDF text shorter than this counts as left out of the quote
 
@@ -39,7 +39,10 @@ SHORT_SKIP = 12  # skipped PDF text shorter than this counts as left out of the 
 def norm(s):
     s = unicodedata.normalize("NFKC", s).lower()      # also turns ⁻⁴ into −4
     s = re.sub(r"-\s*\n\s*(?=[a-z])", "", s)         # rejoin words hyphenated at a line break
+    s = re.sub(r"[~∼≈]", "≈", s)                     # approximately, typeset or typed; "~" below means minus
     s = re.sub(r"[-‐‑‒–—−](?=\s*\d)", "~", s)        # a dash or minus before a digit is a sign: keep it
+    s = re.sub(r"(\d)\s*\.\s*(\d)", r"\1.\2", s)    # a number split around its dot: rejoin it
+    s = re.sub(r"(?<!\d)\.|\.(?!\d)", "", s)         # a dot counts only as a decimal point
     return "".join(ch for ch in s if ch in KEEP)      # drop spaces, other punctuation, Greek
 
 
