@@ -52,6 +52,9 @@ CASES = [
     (NOT_VERBATIM, VOLCANO.replace("10⁻⁷", "10⁷"), "lost exponent sign"),
     (CHECK_SKIPS, FIRST.replace(" independent", ""), "dropped word: must not pass as plain verbatim"),
     (CHECK_SKIPS, FIRST.replace(" log fold change = −5.27,", ""), "dropped phrase: must not pass as plain verbatim"),
+    (NOT_VERBATIM, FIRST.replace("−5.27", "−52.7"), "moved decimal point"),
+    (NOT_VERBATIM, VOLCANO.replace("2.21", "22.1"), "moved decimal point across pages"),
+    (NOT_VERBATIM, FIRST.replace("−5.27", "~5.27"), "minus typed as a tilde"),
 ]
 
 
